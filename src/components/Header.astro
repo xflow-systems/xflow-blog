@@ -1,8 +1,8 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
 ---
- 
+
 <header>
 	<nav>
 		<h2><a href="/">{SITE_TITLE}</a></h2>
@@ -11,7 +11,6 @@ import { SITE_TITLE } from '../consts';
 			<HeaderLink href="/blog">Blog</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
 		</div>
-		<div></div>
 	</nav>
 </header>
 <style>
@@ -19,24 +18,31 @@ import { SITE_TITLE } from '../consts';
 		margin: 0;
 		padding: 0 1em 0 1em;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-		overflow: hidden;
-		background: linear-gradient(var(--yellow), var(--red));
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
-		text-decoration: none;
+		background: var(--blue-dark);
 	}
 	h2 {
 		margin: 0;
 		font-size: 1.5em;
+		background: linear-gradient(var(--gold-light), var(--gold-dark));
+		/* background: var(--gold-light); */
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 
 	h2 a,
 	h2 a.active {
+		color: var(--white);
 	}
 	nav {
+		background: linear-gradient(var(--gold-light), var(--gold-dark));
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		text-decoration: none;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		max-width: 1000px;
+		margin: auto;
 	}
 	nav a {
 		padding: 1em 0.5em;

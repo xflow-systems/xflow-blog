@@ -5,10 +5,17 @@
  */
 
 :root {
-	--black: 15, 18, 25;
+	--black: #000;
 	--white: #fff;
+	--gray: #333;
 	--yellow: #fcfc2b;
+	--orange: #f84202;
 	--red: #c40000;
+	--green: green;
+	--blue-light: #4a5a72;
+	--blue-dark: #181b26;
+	--gold-light: #c7aa7e;
+	--gold-dark: #776b53;
 }
 @font-face {
 	font-family: 'Atkinson';
@@ -30,14 +37,12 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
+	/* background: linear-gradient(var(--gray-gradient)) no-repeat; */
+	background: var(--blue-light);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: rgb(var(--green-light));
 	font-size: 20px;
 	line-height: 1.7;
-	background: black;
 }
 main {
 	width: 720px;
@@ -54,6 +59,10 @@ h6 {
 	margin: 0 0 0.5rem 0;
 	color: rgb(var(--black));
 	line-height: 1.2;
+	/* background: linear-gradient(var(--gold-light), var(--gold-dark)); */
+	background: var(--gold-light);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 h1 {
 	font-size: 3.052em;
