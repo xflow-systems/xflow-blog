@@ -21,8 +21,26 @@ import Layout from '../layouts/BlogPost.astro';
 			</p>
 
 			<h3>
-				Why Start from Scratch?
+				What does this New Stack Look Like?
 			</h3>
+
+			<p>
+				At the lowest level of XFlow's stack will be an FPGA bytestream generator.
+			</p>
+
+			<p>
+				Essentially this allows a digital circuit to be created from scratch.
+			</p>
+
+			<p>
+				Above that will be a language <code>xflow-lang</code> and a database <code>xflow-qengine</code>.
+				This language will allow the database to be queried and will be built on tech from <code>Timely Dataflow</code>
+				that allows ultra-efficient incremental queries.
+			</p>
+			
+			<p>
+				Above this data layer will be a UI layer as well as a Network layer.
+			</p>
 		</main>
 		<Footer />
 	</body>

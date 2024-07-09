@@ -1,5 +1,7 @@
 # Astro Starter Kit: Blog
 
+Images take from https://unsplash.com/s/photos/circuit
+
 ```sh
 npm create astro@latest -- --template blog
 ```
