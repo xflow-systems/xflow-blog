@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/BlogPost.astro";
+import Milestone from "../components/Milestone.astro";
 ---
 
 <Layout
@@ -10,12 +11,12 @@ import Layout from "../layouts/BlogPost.astro";
 	<div>
 		<ul>
 			<li>
-				<code class="status complete">COMPLETE</code> Blog / News Site
+				<Milestone status="complete" label="Blog / News Site" goal="10-7-24" actual="10-7-24" />
 			</li>
 		</ul>
 		<ul>
 			<li>
-				<code class="status in-progress">IN PROGRESS</code> Data Layer
+				<Milestone status="in-progress" label="Data Layer" goal="1-1-26" />
 			</li>
 			<ul>
 				<li>
@@ -23,12 +24,15 @@ import Layout from "../layouts/BlogPost.astro";
 				</li>
 				<ul>
 					<li>
-						<code class="status in-progress">IN PROGRESS</code> Rev
-						Engineer Timely Dataflow
+						<code class="status in-progress">IN PROGRESS</code> Rev Engineer
+						Timely Dataflow
 					</li>
 					<li>
-						<code class="status">NOT STARTED</code> Rev Engineer
-						Aya Prover
+						<code class="status">NOT STARTED</code> Rev Engineer Aya
+						Prover
+					</li>
+					<li>
+						<code class="status">NOT STARTED</code> Learn Verilog Proofs
 					</li>
 				</ul>
 			</ul>
@@ -39,31 +43,11 @@ import Layout from "../layouts/BlogPost.astro";
 <style>
 	ul {
 		margin-left: 60px;
-		border: 1px solid var(--blue-dark);
 		margin-bottom: 5px;
-		border-radius: 3px;
 	}
-	.status {
-		border-radius: 3px;
-		border: 2px solid var(--blue-dark);
-		color: var(--blue-dark);
-		width: 10em;
-		text-align: center;
-		display: inline-block;
-		margin-right: 10px;
-		font-size: 0.8em;
-	}
-	.status.in-progress {
-		border: 2px solid var(--gold-light);
-		color: var(--gold-dark);
-		background: var(--gold-light);
-	}
-	.status.complete {
-		border: 2px solid var(--green-light);
-		color: var(--green-dark);
-		background: var(--green-light);
-	}
+
 	li {
 		margin: 10px;
+		display: flex;
 	}
 </style>

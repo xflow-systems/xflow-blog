@@ -1,0 +1,38 @@
+---
+const { label, status, goal, actual } = Astro.props;
+---
+
+<div><code class={"status " + status}>{status.toUpperCase().replace('-', ' ')}</code></div>
+<div>
+    <div>{label}</div>
+    <div>
+        {goal && (<span><span class="date-label">Goal:</span> {goal}</span>)}
+        {actual && (<span><span class="date-label"> Finished:</span> {actual}</span>)}
+    </div>
+</div>
+
+<style>
+	.date-label {
+		font-size: 0.8em;
+	}
+    .status {
+		border-radius: 3px;
+		border: 1px solid var(--blue-dark);
+		color: var(--blue-dark);
+		width: 8em;
+		text-align: center;
+		display: inline-block;
+		margin-right: 10px;
+		font-size: 0.8em;
+	}
+	.status.in-progress {
+		border: 2px solid var(--gold-light);
+		color: var(--gold-dark);
+		background: var(--gold-light);
+	}
+	.status.complete {
+		border: 2px solid var(--green-light);
+		color: var(--green-dark);
+		background: var(--green-light);
+	}
+</style>
