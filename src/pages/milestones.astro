@@ -1,0 +1,69 @@
+---
+import Layout from "../layouts/BlogPost.astro";
+---
+
+<Layout
+	title="Milestones"
+	description="Progress"
+	pubDate={new Date("July 11 2024")}
+>
+	<div>
+		<ul>
+			<li>
+				<code class="status complete">COMPLETE</code> Blog / News Site
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<code class="status in-progress">IN PROGRESS</code> Data Layer
+			</li>
+			<ul>
+				<li>
+					<code class="status in-progress">IN PROGRESS</code> Research
+				</li>
+				<ul>
+					<li>
+						<code class="status in-progress">IN PROGRESS</code> Rev
+						Engineer Timely Dataflow
+					</li>
+					<li>
+						<code class="status">NOT STARTED</code> Rev Engineer
+						Aya Prover
+					</li>
+				</ul>
+			</ul>
+		</ul>
+	</div>
+</Layout>
+
+<style>
+	ul {
+		margin-left: 60px;
+		border: 1px solid var(--blue-dark);
+		margin-bottom: 5px;
+		border-radius: 3px;
+	}
+	.status {
+		border-radius: 3px;
+		border: 2px solid var(--blue-dark);
+		color: var(--blue-dark);
+		width: 10em;
+		text-align: center;
+		display: inline-block;
+		margin-right: 10px;
+		font-size: 0.8em;
+	}
+	.status.in-progress {
+		border: 2px solid var(--gold-light);
+		color: var(--gold-dark);
+		background: var(--gold-light);
+	}
+	.status.complete {
+		border: 2px solid var(--green-light);
+		color: var(--green-dark);
+		background: var(--green-light);
+	}
+	li {
+		margin: 10px;
+	}
+</style>

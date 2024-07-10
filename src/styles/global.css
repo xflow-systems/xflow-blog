@@ -11,7 +11,8 @@
 	--yellow: #fcfc2b;
 	--orange: #f84202;
 	--red: #c40000;
-	--green: green;
+	--green-dark: rgb(0, 119, 0);
+	--green-light: rgb(0, 210, 0);
 	--blue-light: #4a5a72;
 	--blue-dark: #181b26;
 	--gold-light: #c7aa7e;
