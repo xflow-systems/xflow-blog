@@ -9,34 +9,47 @@ import Milestone from "../components/Milestone.astro";
 	pubDate={new Date("July 11 2024")}
 >
 	<div>
+		<Milestone
+			status="complete"
+			label="Blog / News Site"
+			goal="10-7-2024"
+			actual="10-7-2024"
+		/>
+		<Milestone status="in-progress" label="Data Layer" goal="1-1-2026" />
 		<ul>
-			<li>
-				<Milestone status="complete" label="Blog / News Site" goal="10-7-24" actual="10-7-24" />
-			</li>
-		</ul>
-		<ul>
-			<li>
-				<Milestone status="in-progress" label="Data Layer" goal="1-1-26" />
-			</li>
+			<Milestone status="in-progress" label="Research" goal="1-1-2025" />
 			<ul>
-				<li>
-					<code class="status in-progress">IN PROGRESS</code> Research
-				</li>
-				<ul>
-					<li>
-						<code class="status in-progress">IN PROGRESS</code> Rev Engineer
-						Timely Dataflow
-					</li>
-					<li>
-						<code class="status">NOT STARTED</code> Rev Engineer Aya
-						Prover
-					</li>
-					<li>
-						<code class="status">NOT STARTED</code> Learn Verilog Proofs
-					</li>
-				</ul>
+				<Milestone
+					status="in-progress"
+					label="Rev Engineer Timely Dataflow"
+				/>
+				<Milestone
+					status="not-started"
+					label="Rev Engineer Aya Prover"
+				/><Milestone
+					status="not-started"
+					label="Learn Verilog Proofs"
+				/>
+			</ul>
+
+			<Milestone
+				status="not-started"
+				label="Implementation"
+				goal="1-1-2026"
+			/>
+
+			<ul>
+				<Milestone
+					status="not-started"
+					label="ECP5 FPGA Bytestream Generator"
+				/>
+				<Milestone status="not-started" label="ECP5 FPGA Simulator" />
+				<Milestone status="not-started" label="Query Engine" />
+				<Milestone status="not-started" label="Query / Proof Language" />
 			</ul>
 		</ul>
+		<Milestone status="not-started" label="UI Layer" goal="1-1-2027" />
+		<Milestone status="not-started" label="Networking Layer" goal="1-1-2028" />
 	</div>
 </Layout>
 
@@ -44,10 +57,5 @@ import Milestone from "../components/Milestone.astro";
 	ul {
 		margin-left: 60px;
 		margin-bottom: 5px;
-	}
-
-	li {
-		margin: 10px;
-		display: flex;
 	}
 </style>
